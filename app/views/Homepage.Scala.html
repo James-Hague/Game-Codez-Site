@@ -1,0 +1,8 @@
+
+@(title: String)(content: Html)(Test-Image: Image)
+
+@main(title) {
+
+<img src="@routes.Assets.at("images/Test-Image.jpg")" width="1080" height="720" />
+@content
+}
