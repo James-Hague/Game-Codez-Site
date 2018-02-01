@@ -1,9 +1,83 @@
 
-@(title: String)(content: Html)
+@(title: String)
 
 @main(title) {
 
 
-<link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
-@content
+    <!-- Custom styles for this template -->
+
+
+    <!-- Page Content -->
+
+    <div class="row text-center">
+
+        <div class="col-lg-3 col-md-6 mb-4" id="WeekDeal">
+            <div class="weekDeal">
+
+                <div class="card-body" id="MainDeal">
+                    <h4 class="card-title"></h4>
+                    <p class="card-text"></p>
+                </div>
+                <a href="#" class="btn btn-primary">Weekly Deal 15% Off Bundle</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row text-center">
+
+
+            <!-- Page Features -->
+        <div class="row text-center">
+
+            <div class="col-lg-3 col-md-6 mb-4" id="Card1">
+                <a href= "/GamePage">
+                <div class="card">
+                    <div class="card-body" id="card1image">
+                    </div>
+
+               </div>
+                </a>
+
+            </div>
+
+        </div>
+
+
+            <!-- Page Features -->
+        <div class="row text-center">
+
+            <div class="col-lg-3 col-md-6 mb-4" id="Card2">
+                <div class="card">
+                    <a href= "/Fallout4Page">
+                    <div class="card-body" id="card2image">
+
+                        <h4 class="card-title"></h4>
+                        <p class="card-text"></p>
+                    </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+            <!-- Page Features -->
+        <div class="row text-center">
+
+            <div class="col-lg-3 col-md-6 mb-4" id="Card3">
+                <div class="card">
+
+                    <div class="card-body" id="card1image">
+                        <h4 class="card-title"></h4>
+                        <p class="card-text"></p>
+                    </div>
+                    <a href="#" class="btn btn-primary">Assasins Creed Origins 15% off</a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+        <!-- /.row -->
 }
+
