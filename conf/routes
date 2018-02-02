@@ -3,11 +3,16 @@
 # ~~~~
 
 # Home page
-GET     /                           controllers.Application.index
+GET     /                                    controllers.Application.index
 GET         /Homepage                        controllers.Application.Homepage
-GET         /GamePage                 controllers.Application.GamePage
-GET         /Fallout4Page                 controllers.Application.Fallout4Page
-GET         /LoginPage                controllers.Application.LoginPage
-GET         /MembersPage              controllers.Application.MembersPage
+GET         /GamePage                        controllers.Application.GamePage
+GET         /Fallout4Page                    controllers.Application.Fallout4Page
+GET         /LoginPage                       controllers.Application.LoginPage
+GET         /MembersPage                     controllers.Application.MembersPage
+GET         /game/:gameID                    controllers.Application.GameFill(gameID: Int)
+
+
+
+
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

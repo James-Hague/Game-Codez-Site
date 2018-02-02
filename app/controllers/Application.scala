@@ -1,12 +1,15 @@
 package controllers
+import models.GameCard
+import play.api.i18n.{I18nSupport, MessagesApi}
+import play.api.mvc._
+
 import scala.collection.mutable.ListBuffer
 import play.api._
 import play.api.mvc._
+import views.html
 
 
 class Application extends Controller {
-
-  var gameInfoList = new ListBuffer[String]()
 
 
 
@@ -15,7 +18,11 @@ class Application extends Controller {
   }
 
   def Homepage = Action {
-    Ok(views.html.Homepage("Game-Codez-Homepage"))
+    Ok(views.html.Homepage("Game-Codez-Homepage",GameCard.cardsList))
+
+  }
+  def GameFill(gameID: Int,gameCard: GameCard) = Action {
+    Ok(views.html.GameFill("Game-Codez-Homepage",gameID))
   }
 
   def GamePage = Action {
@@ -26,12 +33,11 @@ class Application extends Controller {
     Ok(views.html.LoginPage("Game-Codez-Homepage"))
   }
 
-def MembersPage = Action {
-  Ok(views.html.MembersPage("Game-Codez-Homepage"))
-}
   def Fallout4Page = Action {
     Ok(views.html.Fallout4Page("Game-Codez-Homepage"))
   }
-
+  def MembersPage = Action {
+    Ok(views.html.MembersPage("Game-Codez-Homepage"))
+  }
 
 }
